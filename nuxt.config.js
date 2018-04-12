@@ -9,10 +9,6 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'A simple Nuxt.js setup to create websites with blog feature using Storyblok as CMS and Netlify to deploy it.' }
     ],
-    plugins: [
-      '@/plugins/content-types',
-      '@/plugins/components'
-    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
@@ -21,6 +17,19 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /*
+  ** Basic Components and Content Type setup
+  */
+  plugins: [
+    '@/plugins/content-types',
+    '@/plugins/components'
+  ],
+  /*
+  ** Storyblok Client
+  */
+  modules: [
+    ['storyblok-nuxt', {accessToken: '0MUsLPPq9VSfVcwp8u05LQtt', cacheProvider: 'memory'}]
+  ],
   /*
   ** Build configuration
   */
