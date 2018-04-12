@@ -1,9 +1,9 @@
 <template>
   <article v-editable="post.content">
-    <img :src="resizeImages(post.content.image, '600x0')" :alt="post.content.image_alt">
+    <img :src="resize(post.content.image, '600x0')" :alt="post.content.image_alt">
     <h1>{{post.name}}</h1>
     <div>
-      <img :src="resizeImages(author.content.image, '50x0')" :alt="author.name">
+      <img :src="resize(author.content.image, '50x0')" :alt="author.name">
       <span>{{author.name}}</span>
     </div>
     <MarkdownContent :content="post.content.content" />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { isEditMode, resizeImages } from '@/plugins/helper'
+import { isEditMode, resize } from '@/plugins/helper'
 import MarkdownContent from '@/components/MarkdownContent'
 
 export default {
@@ -22,7 +22,7 @@ export default {
     MarkdownContent
   },
   methods: {
-    resizeImages
+    resize
   },
   async asyncData (context) {
     // load the content-entry at the current path - will be something like: '/posts/first-post'
