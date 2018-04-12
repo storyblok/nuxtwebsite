@@ -44,8 +44,6 @@ export default {
   async asyncData (context) {
     // load the content-entry at the current path - will be something like: '/posts/first-post'
     const authorResponse = await context.app.$storyapi.get(`cdn/stories${context.route.path}`, { version: 'draft' })
-    console.log(authorResponse.data.story.uuid);
-
     const postsByAuthorResponse = await context.app.$storyapi.get(`cdn/stories`, { 
         version: 'draft', 
         starts_with:'posts/', 

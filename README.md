@@ -29,7 +29,7 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 - [x] Feature List
 - [x] NuxtJS Setup
 - [x] Basic Storyblok Setup
-- [ ] Startpage 
+- [x] Startpage 
 - [x] Basic Responsive Styling
 - [x] Post Detail
 - [x] Post Overview
@@ -50,10 +50,10 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 - [x] Enable Storyblok Live Preview & Side By Side editing
 - [x] Add and Optimize images to Markdown
 - [ ] Export basic styles into variables
-- [ ] Implement nuxt generate for routes
+- [x] Implement nuxt generate for routes
 - [ ] On Generate: Switch from Draft to Published content version
 - [ ] Seed Components
 - [ ] Seed Script
 - [ ] Getting Started Guide 
-- [ ] Netlify Deployment
+- [x] Netlify Deployment
 - [ ] more more more?
