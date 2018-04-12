@@ -1,7 +1,6 @@
 <template>
   <article v-editable="story.content">
     <h1>{{story.name}}</h1>
-
     <HTMLContent :content="story.content.content" />
   </article>
 </template>
