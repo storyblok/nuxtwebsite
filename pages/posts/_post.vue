@@ -1,12 +1,18 @@
 <template>
-  <article v-editable="post.content">
-    <img :src="resize(post.content.image, '600x0')" :alt="post.content.image_alt">
+  <article class="container" v-editable="post.content">
     <h1>{{post.name}}</h1>
-    <div>
-      <img :src="resize(author.content.image, '50x0')" :alt="author.name">
-      <span>{{author.name}}</span>
-    </div>
-    <MarkdownContent :content="post.content.content" />
+    <table class="post__author">
+      <tr>
+        <th>Written by:</th>
+        <td>{{author.name}}</td>
+      </tr>
+      <tr>
+        <th>Latest update:</th>
+        <td>{{date}}</td>
+      </tr>
+    </table>
+    <img class="post__image" :src="resize(post.content.image, '700x300')" :alt="post.content.image_alt">
+    <MarkdownContent :content="post.content.content"/>
   </article>
 </template>
 
@@ -17,6 +23,11 @@ import MarkdownContent from '@/components/MarkdownContent'
 export default {
   mounted () {
     isEditMode(this)
+  },
+  computed: {
+    date() {
+      return new Date(this.post.published_at || this.post.created_at).toJSON().slice(0,10)
+    }
   },
   components: {
     MarkdownContent
@@ -31,3 +42,21 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.post__image {
+  @media screen and (min-width: 840px) {
+    width: 110%;
+    max-width: 110%;
+    transform: translateX(-5%); 
+  }
+  border-radius: 4px;
+}
+
+.post__author {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  padding-bottom: 20px;
+  text-align: left;
+}
+</style>

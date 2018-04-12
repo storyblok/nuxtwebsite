@@ -22,11 +22,9 @@
   box-sizing: border-box;
 
   a {
-    color: #000;
-    text-decoration: none;
     border-bottom: 2px solid #fff;
     &.nuxt-link-exact-active, &.nuxt-link-active, &:hover {
-      color: #42b883;
+      text-decoration: none;
       border-color: #42b883;
     }
   }
