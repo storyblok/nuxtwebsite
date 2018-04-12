@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok">
-    Teaser: {{blok.headline}}
+    {{blok.name}}
   </div>
 </template>
 
