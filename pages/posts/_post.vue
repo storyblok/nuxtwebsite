@@ -1,20 +1,21 @@
 <template>
   <article v-editable="story.content">
+    <img :src="story.content.image" :alt="story.content.image_alt">
     <h1>{{story.name}}</h1>
-    <HTMLContent :content="story.content.content" />
+    <MarkdownContent :content="story.content.content" />
   </article>
 </template>
 
 <script>
 import { isEditMode } from '@/plugins/is-edit-mode'
-import HTMLContent from '@/components/HTMLContent'
+import MarkdownContent from '@/components/MarkdownContent'
 
 export default {
   mounted () {
     isEditMode(this)
   },
   components: {
-    HTMLContent
+    MarkdownContent
   },
   async asyncData (context) {
     const full_slug = `posts/${context.params.post}`
