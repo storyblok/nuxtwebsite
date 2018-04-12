@@ -1,11 +1,15 @@
 <template>
   <div>
     <h1>Authors</h1>
-    <nuxt-link :to="'/' + author.full_slug" :key="author.id" v-for="author in authors">
-      <h2>{{author.name}}</h2>
-      <p>{{author.content.about}}</p>
-      <img :src="resize(author.content.image, '50x0')" :alt="author.name">
-    </nuxt-link>
+    <ul>
+      <li :key="author.id" v-for="author in authors">
+        <nuxt-link :to="'/' + author.full_slug">
+          <h2>{{author.name}}</h2>
+          <p>{{author.content.about}}</p>
+          <img :src="resize(author.content.image, '50x0')" :alt="author.name">
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 
