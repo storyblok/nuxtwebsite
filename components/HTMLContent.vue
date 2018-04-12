@@ -9,7 +9,6 @@ export default {
   props: ['content'],
   computed: {
     parsed() {
-      console.log(this.content);
       return markdown(this.content, '600x0')
     }
   }
