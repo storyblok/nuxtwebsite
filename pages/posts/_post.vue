@@ -1,13 +1,13 @@
 <template>
   <article v-editable="story.content">
-    <img :src="story.content.image" :alt="story.content.image_alt">
+    <img :src="resizeImages(story.content.image, '600x0')" :alt="story.content.image_alt">
     <h1>{{story.name}}</h1>
     <MarkdownContent :content="story.content.content" />
   </article>
 </template>
 
 <script>
-import { isEditMode } from '@/plugins/is-edit-mode'
+import { isEditMode, resizeImages } from '@/plugins/helper'
 import MarkdownContent from '@/components/MarkdownContent'
 
 export default {
@@ -16,6 +16,9 @@ export default {
   },
   components: {
     MarkdownContent
+  },
+  methods: {
+    resizeImages
   },
   async asyncData (context) {
     // load the content-entry at the current path - will be something like: '/posts/first-post'

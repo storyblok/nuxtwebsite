@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { markdown } from '@/plugins/markdown'
+import { markdown } from '@/plugins/helper'
 
 export default {
   props: ['content'],

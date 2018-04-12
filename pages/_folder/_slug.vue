@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { isEditMode } from '@/plugins/is-edit-mode'
+import { isEditMode } from '@/plugins/helper'
 
 export default {
   mounted () {
