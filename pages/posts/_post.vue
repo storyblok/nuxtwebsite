@@ -18,8 +18,8 @@ export default {
     MarkdownContent
   },
   async asyncData (context) {
-    // load the 
-    const { data } = await context.app.$storyapi.get(`cdn/stories/${context.route.path}`, { version: 'draft' })
+    // load the content-entry at the current path - will be something like: '/posts/first-post'
+    const { data } = await context.app.$storyapi.get(`cdn/stories${context.route.path}`, { version: 'draft' })
     return { story: data.story }
   }
 }
