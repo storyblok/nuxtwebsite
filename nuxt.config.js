@@ -22,7 +22,9 @@ module.exports = {
   */
   plugins: [
     '@/plugins/content-types',
-    '@/plugins/components'
+    '@/plugins/components',
+    '@/plugins/is-edit-mode',
+    '@/plugins/markdown'
   ],
   /*
   ** Storyblok Client
