@@ -14,3 +14,11 @@ export default {
   }
 }
 </script>
+
+<style>
+html, body {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+</style>
