@@ -1,7 +1,8 @@
 <template>
   <article v-editable="author.content">
-    <img :src="resizeImages(author.content.image, '100x0')" :alt="author.content.image_alt">
-    <h1>{{author.content.firstname}} {{author.content.lastname}}</h1>
+    <img :src="resizeImages(author.content.image, '100x0')" :alt="author.name">
+    <h1>{{author.name}}</h1>
+    <p>{{author.content.about}}</p>
     <ul>
       <li :key="social_link._uid" v-for="social_link in author.content.socials">
         <a :href="social_link.link.cached_url" target="_blank" rel="noopener nofollow">{{social_link.type}}</a>

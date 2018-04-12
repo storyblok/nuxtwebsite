@@ -3,8 +3,8 @@
     <img :src="resizeImages(post.content.image, '600x0')" :alt="post.content.image_alt">
     <h1>{{post.name}}</h1>
     <div>
-      <img :src="resizeImages(author.content.image, '50x0')" :alt="author.content.firstname + ' ' + author.content.lastname">
-      <span>{{author.content.firstname}} {{author.content.lastname}}</span>
+      <img :src="resizeImages(author.content.image, '50x0')" :alt="author.name">
+      <span>{{author.name}}</span>
     </div>
     <MarkdownContent :content="post.content.content" />
   </article>

@@ -2,8 +2,9 @@
   <div>
     <h1>Authors</h1>
     <nuxt-link :to="'/' + author.full_slug" :key="author.id" v-for="author in authors">
-      <h2>{{author.content.firstname}} {{author.content.lastname}}</h2>
-      <img :src="author.content.image" alt="">
+      <h2>{{author.name}}</h2>
+      <p>{{author.content.about}}</p>
+      <img :src="author.content.image" :alt="author.name">
     </nuxt-link>
   </div>
 </template>
