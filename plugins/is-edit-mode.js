@@ -1,3 +1,5 @@
+import crypto from 'crypto'
+
 export function isEditMode(app) {
   // Want to know more about this? https://www.storyblok.com/docs/Guides/storyblok-latest-js
 
