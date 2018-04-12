@@ -2,6 +2,10 @@
 
 > A simple Nuxt.js setup to create websites with blog feature using Storyblok as CMS and Netlify to deploy it.
 
+## Preview:
+
+http://quizzical-wing-54a27d.netlify.com/
+
 ## Getting Started
 Will be done after Seed script is ready.
 
