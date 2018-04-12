@@ -1,15 +1,19 @@
 <template>
   <div>
-    Home
+    <component v-if="story.content.component" :key="story.content._uid" :story="story" :blok="story.content" :is="story.content.component"></component>
   </div>
 </template>
 
 <script>
-export default {
-  async asyncData (context) {
-    const { data } = await context.app.$storyapi.get(`cdn/stories/home`, { version: 'draft' })
+import { isEditMode } from '@/plugins/helper'
 
-    return { story: res.data.story }
+export default {
+  mounted () {
+    isEditMode(this)
+  },
+  async asyncData (context) {
+    const homeResponse = await context.app.$storyapi.get(`cdn/stories/home`, { version: 'draft' })
+    return { story: homeResponse.data.story }
   }
 }
 </script>
