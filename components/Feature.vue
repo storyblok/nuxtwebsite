@@ -2,13 +2,18 @@
   <div class="feature" v-editable="blok">
     <img class="feature__image" :src="blok.image" :alt="blok.name">
     <h2 class="feature__name">{{ blok.name }}</h2>
-    <p class="feature__description">{{blok.description}}</p>
+    <MarkdownContent :content="blok.description"/>
   </div>
 </template>
 
 <script>
+import MarkdownContent from '@/components/MarkdownContent'
+
 export default {
-  props: ['blok' ]
+  props: ['blok'],
+  components: {
+    MarkdownContent
+  }
 }
 </script>
 
