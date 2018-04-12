@@ -18,8 +18,8 @@ export default {
     MarkdownContent
   },
   async asyncData (context) {
-    const full_slug = `posts/${context.params.post}`
-    const { data } = await context.app.$storyapi.get(`cdn/stories/${full_slug}`, { version: 'draft' })
+    // load the 
+    const { data } = await context.app.$storyapi.get(`cdn/stories/${context.route.path}`, { version: 'draft' })
     return { story: data.story }
   }
 }
