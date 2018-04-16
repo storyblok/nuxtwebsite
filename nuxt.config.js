@@ -31,7 +31,7 @@ module.exports = {
   ** Storyblok Client
   */
   modules: [
-    ['storyblok-nuxt', {accessToken: '0MUsLPPq9VSfVcwp8u05LQtt', cacheProvider: 'memory'}]
+    ['storyblok-nuxt', {accessToken: '0MUsLPPq9VSfVcwp8u05LQtt', cacheProvider: 'memory', excludeHeaderScript: false }]
   ],
   /*
   ** Generate Routes via Storybloks Links API.
