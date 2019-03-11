@@ -66,7 +66,7 @@ module.exports = {
           contentRequests.push(axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}`))
         }
 
-        // Axios allows us to exectue all requests using axios.spread we will than generate our routes and execute the callback
+        // Axios allows us to execute all requests using axios.spread we will than generate our routes and execute the callback
         axios.all(contentRequests).then(axios.spread((...requests) => {
           requests.forEach((request) => {
             Object.keys(request.data.links).forEach((key) => {
