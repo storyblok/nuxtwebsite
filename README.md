@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository is no longer maintained.
+> For a current Nuxt + Storyblok starter, use [blueprint-core-nuxt](https://github.com/storyblok/blueprint-core-nuxt).
+
 # NuxtWebsite [WIP]
 
 > A simple Nuxt.js setup to create websites with blog feature using Storyblok as CMS and Netlify to deploy it.
